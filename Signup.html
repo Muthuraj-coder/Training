@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+
+  <h2>Signup Page</h2>
+    <div class="=container" style="margin-bottom: 20px;">
+  <form action="/task1.html" method="post" >
+    <script>
+    var submit = document.getElementById("submit");
+    submit.addEventListener("click", function(event) {
+      event.preventDefault();
+      alert("Form submitted successfully!");
+    });
+  </script>
+    <label for="Username">Name:</label><br>
+    <input type="text" id="Username" name="Username" required style="width: 30%; padding: 8px; border-color:cyan; border-width: 4px; border-radius: 10px;"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required style="width: 50%; padding: 8px;  border-color:cyan; border-width: 4px; border-radius: 10px;"><br><br>
+
+    <label for="Password">Password:</label><br>
+    <input type="password" id="password" name="password" required style="width: 30%; padding: 8px; border-color:cyan; border-width: 4px; border-radius: 10px;"><br><br>
+
+    <input type="submit" id="submit" value="Create Account" style="
+      background-color:blue;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border-color: crimson;
+      border-width: 4px;
+      border-style: solid;
+      cursor: pointer;"
+      onmouseover="this.style.backgroundColor='cyan'; this.style.color='black';"
+      onmouseout="this.style.backgroundColor='blue'; this.style.color='white';"
+    ">
+     <p>Already have an account? <a href="./task1.html">Login</a></p>
+</div>
+  </form>
+ 
+  
+</body>
+</html>

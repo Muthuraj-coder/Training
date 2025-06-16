@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+
+  <h2>Login Page</h2>
+
+  <form action="/submit" method="post" >
+    <label for="Username">Name:</label><br>
+    <input type="text" id="Username" name="Username" required style="width: 30%; padding: 8px; border-color:cyan; border-width: 4px; border-radius: 10px;"><br><br>
+
+    <label for="Password">Email:</label><br>
+    <input type="password" id="password" name="password" required style="width: 30%; padding: 8px; border-color:cyan; border-width: 4px; border-radius: 10px;"><br><br>
+
+    <input type="submit" value="Submit" style="
+      background-color:blue;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border-color: crimson;
+      border-width: 4px;
+      border-style: solid;
+      cursor: pointer;"
+      onmouseover="this.style.backgroundColor='cyan'; this.style.color='black';"
+      onmouseout="this.style.backgroundColor='blue'; this.style.color='white';"
+    ">
+  </form>
+  <p>Don't have account?<a href="./Signup.html"/>Signup</p>
+</body>
+</html>
