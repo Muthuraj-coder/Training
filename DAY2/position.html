@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .example-box {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-width: 2px;
+            border-style: solid;
+            position: relative;
+        }
+        .static-box {
+            border-color: #333;
+        }
+        .static-inner {
+            background: #e0e0e0;
+            padding: 10px;
+        }
+        .relative-box {
+            border-color: #0074D9;
+        }
+        .relative-inner {
+            position: relative;
+            left: 30px;
+            top: 10px;
+            background: #b3e5fc;
+            padding: 10px;
+        }
+        .absolute-box {
+            border-color: #2ECC40;
+            height: 120px;
+        }
+        .absolute-inner {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background: #d4fc79;
+            padding: 10px;
+        }
+        .fixed-box {
+            border-color: #FF851B;
+            height: 120px;
+        }
+        .fixed-inner {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #ffd699;
+            padding: 10px;
+        }
+        .sticky-box {
+            border-color: #B10DC9;
+            height: 120px;
+            overflow: auto;
+        }
+        .sticky-inner {
+            position: sticky;
+            top: 0;
+            background: #e1bee7;
+            padding: 10px;
+        }
+        .spacer {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Position Property Examples</h2>
+
+    <div class="example-box static-box">
+        <strong>Static Position (default):</strong>
+        <div class="static-inner">This box is static (default).</div>
+    </div>
+
+    <div class="example-box relative-box">
+        <strong>Relative Position:</strong>
+        <div class="relative-inner">
+            This box is moved 30px right and 10px down from its normal position.
+        </div>
+    </div>
+
+    <div class="example-box absolute-box">
+        <strong>Absolute Position:</strong>
+        <div class="absolute-inner">
+            This box is absolutely positioned 20px from top and left of its nearest positioned ancestor.
+        </div>
+        <span>This is the containing block (relative).</span>
+    </div>
+
+    <div class="example-box fixed-box">
+        <strong>Fixed Position:</strong>
+        <div class="fixed-inner">
+            This box is fixed to the bottom-right of the viewport.
+        </div>
+        <span>Scroll the page to see the fixed box stay in place.</span>
+    </div>
+
+    <div class="example-box sticky-box">
+        <strong>Sticky Position:</strong>
+        <div class="sticky-inner">
+            This box will stick to the top of its container when you scroll.
+        </div>
+        <div class="spacer"></div>
+        <span>Scroll inside this box to see sticky in action.</span>
+    </div>
+</body>
+</html>

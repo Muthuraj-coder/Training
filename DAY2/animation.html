@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Step 1: Define the keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 9; }
+    }
+
+    /* Step 2: Apply animation to the element */
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: infinite;
+      animation-fill-mode:both;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+</body>
+</html>
