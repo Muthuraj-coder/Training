@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stone Paper Pencil Scissor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      background: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+    }
+    .result {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .scoreboard {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🪨📄✏️✂️ Stone Paper Pencil Scissor Game</h1>
+  <div>
+    <button onclick="play('stone')">🪨 Stone</button>
+    <button onclick="play('paper')">📄 Paper</button>
+    <button onclick="play('pencil')">✏️ Pencil</button>
+    <button onclick="play('scissor')">✂️ Scissor</button>
+  </div>
+
+  <div class="result" id="resultText"></div>
+  <div class="scoreboard">
+    <p>User Score: <span id="userScore">0</span></p>
+    <p>Computer Score: <span id="compScore">0</span></p>
+  </div>
+
+  <script>
+    const choices = ['stone', 'paper', 'pencil', 'scissor'];
+    let userScore = 0;
+    let compScore = 0;
+
+    function play(userChoice) {
+      const compChoice = choices[Math.floor(Math.random() * 4)];
+      const result = getResult(userChoice, compChoice);
+
+      if (result === 'win') {
+        userScore++;
+        document.getElementById("resultText").innerText = `You chose ${userChoice}, computer chose ${compChoice}. You Win! 🎉`;
+      } else if (result === 'lose') {
+        compScore++;
+        document.getElementById("resultText").innerText = `You chose ${userChoice}, computer chose ${compChoice}. You Lose! 😢`;
+      } else {
+        document.getElementById("resultText").innerText = `You both chose ${userChoice}. It's a Draw! 😐`;
+      }
+
+      document.getElementById("userScore").innerText = userScore;
+      document.getElementById("compScore").innerText = compScore;
+    }
+
+    function getResult(user, comp) {
+      if (user === comp) return 'draw';
+
+      const wins = {
+        stone: ['scissor', 'pencil'],   // Stone crushes Scissor and Pencil
+        paper: ['stone'],               // Paper covers Stone
+        pencil: ['paper'],              // Pencil writes on Paper
+        scissor: ['paper', 'pencil']    // Scissor cuts Paper and Pencil
+      };
+
+      return wins[user].includes(comp) ? 'win' : 'lose';
+    }
+  </script>
+
+</body>
+</html>
